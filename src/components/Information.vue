@@ -1,4 +1,5 @@
 <template>
+
     <main id="main" class="main page__main main__posts">
         <section class="first">
             <img class="first__img" src="../public/images/dest/bg.png" alt="" data-aos="zoom-out-up" data-aos-duration="1500">
@@ -46,6 +47,7 @@
             </div>
         </div>
     </main>
+
 </template>
 
 <script>
