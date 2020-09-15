@@ -1,0 +1,432 @@
+@include media("<laptop") {
+  .features {
+    padding-bottom: em(100px, $fs);
+
+    &__inner {
+      padding: em(100px, $fs) 0;
+    }
+  }
+
+  .info__item {
+    &--circle {
+      width: em(340px, $fs);
+      height: em(340px, $fs);
+    }
+
+    &--square {
+      left: 45%
+    }
+  }
+
+  .pulse {
+    top: em(10px, $fs);
+  }
+}
+
+@include media("<HD") {
+  .first {
+    &__heading {
+      padding-left: 0;
+      min-height: em(550px, $fs);
+    }
+
+    &__inner {
+      padding-left: 0;
+      padding-bottom: em(50px, $fs);
+    }
+  }
+
+  .promo {
+    min-height: 100%;
+    padding-bottom: em(50px, $fs);
+
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__left {
+      padding-left: 0;
+    }
+  }
+
+  .main__frontpage {
+    .promo {
+      min-height: 100vh;
+    }
+  }
+
+  .features {
+    padding-bottom: em(80px, $fs);
+
+    &__inner {
+      flex-wrap: wrap;
+      padding: em(80px, $fs) 0;
+    }
+
+    &__item {
+      flex-basis: 33%;
+
+      &-title {
+        text-align: center;
+        padding: 0 em(10px, $fs);
+      }
+
+      &-value {
+        font-size: em(50px, $fs);
+      }
+
+      &-delimiter {
+        margin: em(20px, $fs) auto;
+      }
+    }
+  }
+
+  .services {
+    &__item {
+      width: 33.3%;
+      padding: em(40px, $fs);
+    }
+  }
+
+  .info {
+    min-height: em(600px, $fs);
+  }
+
+  .prices {
+    &__promo {
+      padding-bottom: em(100px, $fs);
+
+      .promo__inner {
+        flex-direction: row;
+      }
+    }
+  }
+
+  .vacancies {
+    &__left {
+      padding-left: 0;
+    }
+
+    &__right {
+      padding: em(50px, $fs) 0 0 em(50px, $fs);
+    }
+  }
+
+  .tabs-content {
+    ul {
+      margin-bottom: em(40px, $fs);
+    }
+  }
+
+  .feedback {
+    &__contacts {
+      padding-left: 0;
+    }
+  }
+
+  .pulse {
+    top: em(10px, $fs)
+  }
+}
+
+@include media("<991") {
+  .cursor {
+    opacity: 0;
+  }
+
+  .services {
+    &__item {
+      width: 50%;
+    }
+  }
+
+  .prices {
+    &__promo {
+      .promo__inner {
+        flex-direction: column;
+      }
+    }
+  }
+
+  .info {
+    &__item {
+      &--circle {
+        left: 50%;
+        margin-left: em(-170px, $fs)
+      }
+
+      &--square {
+        padding: em(10px, $fs);
+        left: 55%;
+      }
+    }
+  }
+
+  .tabs-list {
+    &__link {
+      font-size: em(22px, $fs);
+    }
+
+    &__item {
+      min-height: em(60px, $fs);
+    }
+  }
+
+  .vacancies {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__right {
+      padding: em(40px, $fs);
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  .feedback {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__form {
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  .contacts {
+    &__item {
+      margin-bottom: em(20px, $fs);
+    }
+  }
+
+  .pulse {
+    top: em(-10px, $fs);
+  }
+}
+
+@include media("<768") {
+  .header {
+    &__inner {
+      padding: em(20px, $fs) 0;
+    }
+
+    &__lang {
+      display: none;
+    }
+
+    &__menu {
+      .lang-switcher {
+        display: flex;
+        justify-content: center;
+
+        &__item {
+          margin: 0 em(20px, $fs);
+        }
+      }
+    }
+  }
+
+  .menu {
+    overflow: visible;
+
+    &__item {
+      margin-top: em(30px, $fs);
+    }
+
+    &__link {
+      span {
+        font-size: em(18px, $fs);
+      }
+
+      &:before {
+        top: em(14px, $fs);
+        width: em(35px, $fs);
+      }
+
+      &:after {
+        top:  em(8px, $fs);
+        width: em(15px, $fs);
+        height: em(15px, $fs);
+      }
+    }
+  }
+
+  .vacancies {
+    &__right {
+      padding: em(20px, $fs) em(15px, $fs);
+    }
+  }
+
+  .btn {
+    max-width: em(240px, $fs);
+  }
+
+  .tabs-list {
+    &__item {
+      padding-right: 80px;
+    }
+
+    &__link {
+      line-height: 1.4;
+
+      span {
+        &:before {
+          padding-right: 80px;
+        }
+      }
+
+      &:before {
+        top: em(17px, $fs);
+        right: em(15px, $fs)
+      }
+
+      &:after {
+        top: em(13px, $fs);
+        right: em(15px, $fs)
+      }
+    }
+  }
+  .tabs-content {
+    &__item {
+      min-height: 100%;
+      max-height: em(900px, $fs);
+    }
+
+    ul {
+      padding-left: em(20px, $fs);
+    }
+
+    li {
+      &:before {
+        content: '- ';
+      }
+    }
+  }
+
+  .pulse {
+    top: em(-20px, $fs);
+  }
+}
+@include media("<576") {
+  .page {
+    &-title {
+      font-size: em(60px, $fs);
+    }
+  }
+
+  .first {
+    &__inner {
+      padding-bottom: em(50px, $fs);
+    }
+
+    &__heading {
+      margin-bottom: em(40px, $fs);
+      min-height: em(300px, $fs);
+      align-items: flex-end;
+    }
+
+    &__description-item {
+      font-size: em(18px, $fs);
+    }
+  }
+
+  .features {
+    padding-bottom: em(50px, $fs);
+
+    &__inner {
+      padding: em(30px, $fs) 0 0;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      flex-basis: 50%;
+      min-width: em(140px, $fs);
+
+      &-title {
+        text-align: center;
+        padding: 0 em(10px, $fs);
+      }
+
+      &-value {
+        font-size: em(50px, $fs);
+      }
+
+      &-delimiter {
+        margin: em(20px, $fs) auto;
+      }
+    }
+  }
+  .services {
+    &__item {
+      width: 100%;
+      padding: em(30px, $fs);
+
+      &-text {
+        font-size: em(20px, $fs);
+      }
+    }
+
+    &__trigger {
+      margin: em(80px, $fs) auto;
+    }
+  }
+
+  .promo {
+    &__right {
+      &-text {
+        font-size: em(22px, $fs);
+      }
+    }
+
+    &__left {
+      .info {
+        min-height: em(500px, $fs);
+      }
+    }
+  }
+
+  .info {
+    &__item {
+      &--circle-wrapper {
+        top: 0;
+      }
+
+      &--square {
+        left: 20%;
+        right: auto;
+        bottom: em(50px, $fs);
+      }
+    }
+  }
+
+  .feedback {
+    &__form {
+      padding: em(40px, $fs);
+    }
+  }
+
+  .contacts {
+    &__link {
+      font-size: 18px;
+    }
+  }
+
+  .pulse {
+    top: em(-60px, $fs);
+    width: auto;
+  }
+
+  .animated-title {
+    margin-top: em(40px, $fs);
+
+    &__text {
+      &.subtitle {
+        font-size: em(200px, $fs);
+      }
+    }
+  }
+}

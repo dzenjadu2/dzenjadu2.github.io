@@ -1,0 +1,25 @@
+$breakpoints: (
+  '4k': 3840px,
+  '2k': 2560px,
+  'FullHD': 1920px,
+  'HD+': 1680px,
+  'laptop-large': 1600px,
+  'laptop-md': 1440px,
+  'laptop': 1366px,
+  'HD': 1280px,
+  'laptop-small': 1200px,
+  'old': 1024px,
+        '991': 991px,
+        '768': 768px,
+        '576': 576px,
+) !default;
+
+$media-expressions: (
+  'screen': 'screen',
+  'print': 'print',
+  'handheld': 'handheld',
+  'landscape': '(orientation: landscape)',
+  'portrait': '(orientation: portrait)',
+  'retina2x': '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)',
+  'retina3x': '(-webkit-min-device-pixel-ratio: 3), (min-resolution: 350dpi), (min-resolution: 3dppx)'
+) !default;

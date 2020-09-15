@@ -1,0 +1,3 @@
+@function em($object, $font: 16) {
+  @return #{$object/$font}em;
+}

@@ -1,0 +1,94 @@
+@import 'helpers/common/functions';
+@import 'helpers/media-query/include-media';
+
+$w: #ffffff;
+$b: #000000;
+$t: transparent;
+$dark: #03090f;
+$gray: #b0b0b0;
+$red: #be2a2a;
+
+$accent: $red;
+$fs: 14px;
+$textcolor: $w;
+$system: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+$TTCommons: TTCommons, sans-serif;
+
+@mixin font($fname, $fstyle, $fweight, $furl) {
+	@font-face {
+		font-family: $fname;
+		font-style: $fstyle;
+		font-weight: $fweight;
+		src: local($fname), url($furl) format('woff2'), url($furl) format('woff');
+	}
+}
+
+@include font('TTCommons', normal, 100, '../fonts/TTCommons-Thin.woff');
+@include font('TTCommons', normal, 300, '../fonts/TTCommons-Light.woff');
+@include font('TTCommons', normal, 400, '../fonts/TTCommons-Regular.woff');
+@include font('TTCommons', normal, 500, '../fonts/TTCommons-Medium.woff');
+@include font('TTCommons', normal, 600, '../fonts/TTCommons-DemiBold.woff');
+@include font('TTCommons', normal, 700, '../fonts/TTCommons-Bold.woff');
+@include font('TTCommons', normal, 800, '../fonts/TTCommons-ExtraBold.woff');
+@include font('TTCommons', normal, 900, '../fonts/TTCommons-Black.woff');
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: $accent;
+	color: #fff;
+}
+
+input, textarea {
+	outline: none;
+	&:focus:required:invalid { border-color: red }
+	&:required:valid { border-color: green }
+}
+
+body {
+	font-family: $TTCommons;
+	font-size: $fs;
+	font-weight: 300;
+	min-width: em(320px, $fs);
+	position: relative;
+	line-height: 1.65;
+	overflow-x: hidden;
+	color: $textcolor;
+	min-height: 100%;
+}
+
+input, textarea {
+	border: #666 1px solid;
+	outline: none;
+
+	&:focus:required:invalid {
+		border-color: red;
+	}
+
+	&:required:valid {
+		border-color: green;
+	}
+}
+
+input,
+textarea,
+button,
+a {
+	&:active,
+  &:hover,
+  &:focus {
+		outline: 0;
+		outline-offset: 0;
+	}
+}
+
+b, strong {
+	font-weight: bold;
+}
+
+input {
+	border-radius: 0;
+	-webkit-appearance: none;
+}
