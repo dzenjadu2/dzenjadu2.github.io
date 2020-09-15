@@ -2694,7 +2694,7 @@ button {
 
 .first {
     position: relative;
-    overflow: hidden
+    /*overflow: hidden*/
 }
 
 .first__img {
@@ -2718,7 +2718,6 @@ button {
 }
 
 .first__inner {
-    padding-left: 32%;
     padding-bottom: 14.28571em
 }
 

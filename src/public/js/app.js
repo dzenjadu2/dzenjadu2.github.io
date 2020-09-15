@@ -217,6 +217,3 @@ const appInit = () => {
 }
 
 export default appInit;
-
-
-
